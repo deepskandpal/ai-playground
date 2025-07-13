@@ -1,0 +1,40 @@
+[project]
+name = "maths-for-ml"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "anywidget>=0.9.18",
+    "gymnasium[box2d]>=1.1.1",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.7",
+    "matplotlib>=3.10.3",
+    "nbformat>=5.10.4",
+    "pandas>=2.3.0",
+    "plotly>=6.1.2",
+    "seaborn>=0.13.2",
+    "swig>=4.3.1",
+    "torch>=2.7.1",
+    "tqdm>=4.67.1",
+    "accelerate",
+    "peft",
+    "trl==0.15.2",
+    "sentencepiece",
+    "protobuf",
+    "datasets>=3.4.1",
+    "huggingface_hub",
+    "hf_transfer",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "unsloth; sys_platform != 'darwin'",
+    "vllm; sys_platform != 'darwin'",
+    "bitsandbytes; sys_platform != 'darwin'",
+    "xformers>=0.0.31; sys_platform != 'darwin'",
+    "triton; sys_platform != 'darwin'",
+    "cut_cross_entropy; sys_platform != 'darwin'",
+    "unsloth_zoo; sys_platform != 'darwin'",
+]
+macos = [
+    # macOS-compatible alternatives - currently empty
+]
